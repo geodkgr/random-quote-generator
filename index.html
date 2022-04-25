@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random quote generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <header>Random quote generator</header>
+        <button type="button" onclick="generateQuote()">Generate Quote <br> ⬇ </button>
+        <p id="myPara"></p>
+    </div>
+    <script>
+        const x = document.getElementById("myPara");
+
+        let quote = [
+            "Being brave doesn’t mean you go looking for trouble.",
+            "Laughter is timeless, imagination has no age, and dreams are forever.",
+            "If there ever comes a day when we can’t be together, keep me in your heart. I’ll stay there forever.",
+            "There’s a great big beautiful tomorrow waiting at the end of every day.",
+            "The only rock I know that stays steady, the only institution I know that works, is the family."
+        ]
+
+        function generateQuote() {
+            var randomQuote = Math.floor(Math.random() * (quote.length));
+            x.innerHTML = quote[randomQuote];
+        }
+    </script>
+</body>
+</html>
